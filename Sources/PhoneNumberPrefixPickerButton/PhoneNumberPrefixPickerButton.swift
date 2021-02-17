@@ -24,7 +24,10 @@ public struct PhoneNumberPrefixPickerButton: View {
             
             self.showPhonePrefixPickerSheet = true
             
-        }.sheet(isPresented: self.$showPhonePrefixPickerSheet) {
+        }.buttonStyle(PlainButtonStyle())
+        .foregroundColor(Color.blue)
+        
+        .sheet(isPresented: self.$showPhonePrefixPickerSheet) {
             
             CountrySearchList(selectedPhoneNumberPrefix: self.$selectedPhoneNumberPrefix)
             
