@@ -14,7 +14,7 @@ public struct CountryPickerButton: View {
     @Binding public var selectedCountry: String
     @State private var showCountryPickerSheet: Bool = false
     
-    var body: some View {
+    public var body: some View {
         
         Button(
         
