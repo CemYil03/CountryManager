@@ -13,12 +13,20 @@ let package = Package(
         .library(
             name: "PhoneNumberPrefixPickerButton",
             targets: ["PhoneNumberPrefixPickerButton"]
+        ),
+        .library(
+            name: "CountryPickerButton",
+            targets: ["CountryPickerButton"]
         )
     ],
     targets: [
         .target(name: "CountryManager"),
         .target(
             name: "PhoneNumberPrefixPickerButton",
+            dependencies: ["CountryManager"]
+        ),
+        .target(
+            name: "CountryPickerButton",
             dependencies: ["CountryManager"]
         )
     ]
