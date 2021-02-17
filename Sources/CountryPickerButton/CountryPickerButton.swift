@@ -14,6 +14,10 @@ public struct CountryPickerButton: View {
     @Binding public var selectedCountry: String
     @State private var showCountryPickerSheet: Bool = false
     
+    public init(selectedCountry: Binding<String>) {
+        self._selectedCountry = selectedCountry
+    }
+    
     public var body: some View {
         
         Button(
