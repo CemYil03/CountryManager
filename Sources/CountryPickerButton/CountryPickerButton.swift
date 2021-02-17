@@ -9,7 +9,7 @@ import SwiftUI
 //import Cou
 
 @available(iOS 14.0, *)
-struct CountryPickerButton: View {
+public struct CountryPickerButton: View {
     
     @Binding public var selectedCountry: String
     @State private var showCountryPickerSheet: Bool = false
@@ -29,7 +29,9 @@ struct CountryPickerButton: View {
         
         .sheet(isPresented: self.$showCountryPickerSheet) {
             
-            
+            Button("Demo set") {
+                self.selectedCountry = "Deutschland"
+            }
             
         }
         
